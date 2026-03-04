@@ -1,0 +1,38 @@
+{
+  "name": "ljwmanage1",
+  "private": true,
+  "version": "1.0.3",
+  "scripts": {
+    "dev": "cross-env vite --mode development",
+    "test": "vite build --mode test",
+    "product": "cross-env vite --mode production",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@tinymce/tinymce-vue": "^4.0.7",
+    "axios": "^0.26.0",
+    "element-plus": "^2.2.1",
+    "file-save": "^0.2.0",
+    "file-saver": "^2.0.5",
+    "js-cookie": "^3.0.1",
+    "js-md5": "^0.7.3",
+    "less": "^4.1.2",
+    "qrcode": "^1.5.4",
+    "script-loader": "^0.7.2",
+    "swiper": "^6.5.7",
+    "vue": "^3.5.17",
+    "vue-draggable-next": "^2.2.1",
+    "vue-router": "^4.0.12",
+    "vuedraggable": "^4.1.0",
+    "vuex": "^4.0.2",
+    "xlsx": "^0.16.9"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.2.0",
+    "cross-env": "^7.0.3",
+    "less-loader": "^6.2.0",
+    "swiper": "^5.4.5",
+    "vite": "^2.3.7"
+  }
+}

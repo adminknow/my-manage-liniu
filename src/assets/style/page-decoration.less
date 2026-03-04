@@ -1,0 +1,139 @@
+.decoration-edit {
+  position: relative;
+  height: calc(100vh - 200px);
+  overflow: hidden; /* 防止内容溢出 */
+  background: #f7f8f9;
+  .sidebar {
+    background: #fff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 200px; /* 固定栏的宽度 */
+    overflow-y: auto; /* 如果内容过多则允许垂直滚动 */
+  }
+  .l {
+    left: 0;
+    ul {
+      margin: 0;
+      padding: 0;
+      li {
+        width: 80px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        cursor: default;
+        list-style: none;
+        font-size: 14px;
+        color: #666;
+        float: left;
+        margin: 0 10px;
+        border-radius: 6px;
+        transition: all 0.3s;
+        cursor: pointer;
+        &:hover {
+          background: #efefef;
+        }
+        span {
+          display: block;
+          font-size: 40px;
+          margin-bottom: 8px;
+          color: #999;
+        }
+        p {
+          display: block;
+          margin: 0;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .r {
+    width: 400px; /* 固定栏的宽度 */
+    right: 0;
+  }
+  .c {
+    position: absolute;
+    left: 400px; /* 左侧固定栏的宽度 */
+    right: 300px; /* 右侧固定栏的宽度 */
+    top: 0;
+    bottom: 0;
+    overflow-y: auto; /* 允许内容垂直滚动 */
+    background: #f7f8f9;
+    box-sizing: border-box; /* 边框计算在宽度内 */
+    padding: 10px; /* 内容区域的内边距 */
+    .view-content {
+      width: 400px;
+      height: 650px;
+      background: #f5f5f5;
+      overflow-y: auto;
+      overflow-x: hidden;
+      box-shadow: 0 2px 6px #ccc;
+      &::-webkit-scrollbar {
+        width: 6px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: #dbdbdb;
+      }
+      &::-webkit-scrollbar-track {
+        background: #f6f6f6;
+      }
+
+      .item {
+        transition: all 0.3s;
+        background: #fff;
+        &:hover {
+          transform: scale(0.95);
+          border-radius: 10px;
+          box-shadow: 0 0 10px #afafaf;
+          .el-icon-error {
+            display: block;
+          }
+        }
+        div {
+          pointer-events: none;
+        }
+        .wait {
+          background: #deedff;
+          height: 35px;
+          text-align: center;
+          line-height: 35px;
+          font-size: 12px;
+          color: #666;
+        }
+        .el-icon-error {
+          position: absolute;
+          right: -6px;
+          top: -6px;
+          color: #f56c6c;
+          font-size: 25px;
+          cursor: pointer;
+          display: none;
+          z-index: 9999;
+        }
+      }
+    }
+    /* 隐藏滚动条 */
+    .view-content::-webkit-scrollbar {
+      width: 0; /* 隐藏垂直滚动条 */
+      height: 0; /* 隐藏水平滚动条 */
+    }
+  }
+  .submit-btn {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.top-set {
+  position: relative;
+  top: 0;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 10px;
+  border-left: solid 4px #f56c6c;
+  border-bottom: solid 1px #ddd;
+}
